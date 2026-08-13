@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ramona Gómez Odontología Estética</title>
+
+
+    <style>
+
+        /* ==========================
+        CONFIGURACIÓN GENERAL
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* ==========================
+        HEADER
+        ========================== */
+
+        header {
+            background-color: #444444;
+            color: white;
+            padding: 20px 8%;
+        }
+
+        .header-contenido {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+        }
+
+        .logo p {
+            font-size: 14px;
+            color: #dddddd;
+        }
+
+
+        /* ==========================
+        MENU
+        ========================== */
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #cccccc;
+        }
+
+
+        /* ==========================
+        BANNER
+        ========================== */
+
+        .banner {
+            min-height: 420px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.50),
+                    rgba(0, 0, 0, 0.50)
+                ),
+                url("img/odontologia.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+        }
+
+        .banner-contenido {
+            max-width: 700px;
+        }
+
+        .banner h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+
+        /* ==========================
+        BOTÓN
+        ========================== */
+
+        .boton {
+            display: inline-block;
+
+            background-color: #555555;
+            color: white;
+
+            padding: 12px 25px;
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #222222;
+            transform: translateY(-2px);
+        }
+
+
+        /* ==========================
+        SECCIONES
+        ========================== */
+
+        section {
+            padding: 60px 8%;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .titulo-seccion h2 {
+            color: #444444;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .titulo-seccion p {
+            color: #666666;
+        }
+
+
+        /* ==========================
+        SERVICIOS
+        ========================== */
+
+        .categorias {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .categoria {
+            background-color: white;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .categoria:hover {
+            transform: translateY(-5px);
+        }
+
+        .categoria .icono {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #777777;
+        }
+
+        .categoria h3 {
+            color: #444444;
+            margin-bottom: 10px;
+        }
+
+        .categoria p {
+            color: #666666;
+            font-size: 14px;
+        }
+
+
+        /* ==========================
+        TRATAMIENTOS
+        ========================== */
+
+        .productos {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+        .producto {
+            background-color: white;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.10);
+
+            transition: 0.3s;
+        }
+
+        .producto:hover {
+            transform: translateY(-5px);
+        }
+
+        .producto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .producto-contenido {
+            padding: 20px;
+        }
+
+        .producto h3 {
+            color: #444444;
+            margin-bottom: 8px;
+        }
+
+        .producto p {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+
+        /* ==========================
+        PROMOCIONES
+        ========================== */
+
+        .promocion {
+            padding: 70px 10%;
+
+            background-color: #444444;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .promocion h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .promocion p {
+            max-width: 700px;
+
+            margin: 0 auto 20px;
+
+            font-size: 18px;
+
+            color: #eeeeee;
+        }
+
+        .precio-promocion {
+            display: inline-block;
+
+            padding: 12px 25px;
+
+            margin: 10px 0 20px;
+
+            border: 2px solid #dddddd;
+
+            font-size: 24px;
+
+            font-weight: bold;
+
+            color: white;
+        }
+
+        .promocion .boton {
+            background-color: #eeeeee;
+            color: #333333;
+        }
+
+        .promocion .boton:hover {
+            background-color: #cccccc;
+        }
+
+
+        /* ==========================
+        NOSOTROS
+        ========================== */
+
+        .nosotros {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .nosotros img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .nosotros h2 {
+            color: #444444;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .nosotros p {
+            margin-bottom: 15px;
+        }
+
+
+        /* ==========================
+        HORARIO
+        ========================== */
+
+        .horario {
+            background-color: #e1e1e1;
+            text-align: center;
+        }
+
+        .horario h2 {
+            color: #444444;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .horario p {
+            margin-bottom: 10px;
+            color: #555555;
+        }
+
+
+        /* ==========================
+        CONTACTO
+        ========================== */
+
+        .contacto {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 40px;
+        }
+
+        .informacion-contacto h3 {
+            color: #444444;
+            margin-bottom: 15px;
+        }
+
+        .informacion-contacto p {
+            margin-bottom: 10px;
+        }
+
+        .informacion-contacto a {
+            color: #444444;
+            font-weight: bold;
+        }
+
+        form {
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .campo {
+            margin-bottom: 15px;
+        }
+
+        .campo label {
+            display: block;
+
+            margin-bottom: 5px;
+
+            font-weight: bold;
+        }
+
+        .campo input,
+        .campo textarea,
+        .campo select {
+            width: 100%;
+
+            padding: 10px;
+
+            border: 1px solid #cccccc;
+
+            border-radius: 5px;
+
+            font-size: 15px;
+        }
+
+        .campo textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        form button {
+            border: none;
+
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+
+        /* ==========================
+        FOOTER
+        ========================== */
+
+        footer {
+            background-color: #222222;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+        footer h2 {
+            margin-bottom: 10px;
+        }
+
+        footer h3 {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #dddddd;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        footer a {
+            color: #dddddd;
+        }
+
+
+        /* ==========================
+        RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .categorias {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .productos {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .nosotros,
+            .contacto {
+                grid-template-columns: 1fr;
+            }
+
+            .header-contenido {
+                flex-direction: column;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            nav ul {
+                flex-direction: column;
+
+                text-align: center;
+
+                gap: 10px;
+            }
+
+            .banner h2 {
+                font-size: 34px;
+            }
+
+            .banner p {
+                font-size: 17px;
+            }
+
+            .categorias,
+            .productos {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 40px 5%;
+            }
+
+            .promocion h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================
+        HEADER
+    =========================== -->
+
+    <header>
+
+        <div class="header-contenido">
+
+            <div class="logo">
+
+                <h1>
+                    Ramona Gómez
+                </h1>
+
+                <p>
+                    Odontología Estética
+                </p>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#tratamientos">
+                            Tratamientos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#promociones">
+                            Promociones
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#nosotros">
+                            Nosotros
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contacto">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================
+        BANNER
+    =========================== -->
+
+    <main id="inicio">
+
+        <section class="banner">
+
+            <div class="banner-contenido">
+
+                <h2>
+                    Somos tu mejor sonrisa
+                </h2>
+
+                <p>
+                    Odontología estética para cuidar,
+                    mejorar y transformar tu sonrisa.
+                </p>
+
+                <a
+                    href="#tratamientos"
+                    class="boton"
+                >
+                    Ver tratamientos
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================
+        SERVICIOS
+        =========================== -->
+
+        <section>
+
+            <div class="titulo-seccion">
+
+                <h2>
+                    Nuestros servicios
+                </h2>
+
+                <p>
+                    Tratamientos para cuidar y mejorar tu sonrisa
+                </p>
+
+            </div>
+
+
+            <div class="categorias">
+
+
+                <article class="categoria">
+
+                    <div class="icono">
+                        CARILLAS
+                    </div>
+
+                    <h3>
+                        Carillas dentales
+                    </h3>
+
+                    <p>
+                        Mejoramos la apariencia de tus dientes
+                        para lograr una sonrisa más estética.
+                    </p>
+
+                </article>
+
+
+                <article class="categoria">
+
+                    <div class="icono">
+                        BLANQUEAMIENTO
+                    </div>
+
+                    <h3>
+                        Blanqueamiento
+                    </h3>
+
+                    <p>
+                        Tratamiento para conseguir una sonrisa
+                        más blanca y luminosa.
+                    </p>
+
+                </article>
+
+
+                <article class="categoria">
+
+                    <div class="icono">
+                        SONRISA
+                    </div>
+
+                    <h3>
+                        Diseño de sonrisa
+                    </h3>
+
+                    <p>
+                        Diseñamos una sonrisa que se adapte
+                        a tus características.
+                    </p>
+
+                </article>
+
+
+                <article class="categoria">
+
+                    <div class="icono">
+                        LIMPIEZA
+                    </div>
+
+                    <h3>
+                        Limpieza dental
+                    </h3>
+
+                    <p>
+                        Ayudamos a mantener tus dientes
+                        limpios y saludables.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================
+            TRATAMIENTOS
+        =========================== -->
+
+        <section id="tratamientos">
+
+            <div class="titulo-seccion">
+
+                <h2>
+                    Tratamientos destacados
+                </h2>
+
+                <p>
+                    Conoce algunos de nuestros servicios
+                    de odontología estética
+                </p>
+
+            </div>
+
+
+            <div class="productos">
+
+
+                <article class="producto">
+
+                    <img
+                        src="img/carillas.jpg"
+                        alt="Carillas dentales"
+                    >
+
+                    <div class="producto-contenido">
+
+                        <h3>
+                            Carillas dentales
+                        </h3>
+
+                        <p>
+                            Tratamiento estético que ayuda
+                            a mejorar la forma y apariencia
+                            de los dientes.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="boton"
+                        >
+                            Agendar cita
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="producto">
+
+                    <img
+                        src="img/blanqueamiento.jpg"
+                        alt="Blanqueamiento dental"
+                    >
+
+                    <div class="producto-contenido">
+
+                        <h3>
+                            Blanqueamiento dental
+                        </h3>
+
+                        <p>
+                            Tratamiento para conseguir
+                            una sonrisa más luminosa.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="boton"
+                        >
+                            Agendar cita
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="producto">
+
+                    <img
+                        src="img/diseno-sonrisa.jpg"
+                        alt="Diseño de sonrisa"
+                    >
+
+                    <div class="producto-contenido">
+
+                        <h3>
+                            Diseño de sonrisa
+                        </h3>
+
+                        <p>
+                            Tratamiento enfocado en mejorar
+                            la estética de tu sonrisa.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="boton"
+                        >
+                            Agendar cita
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="producto">
+
+                    <img
+                        src="img/limpieza.jpg"
+                        alt="Limpieza dental"
+                    >
+
+                    <div class="producto-contenido">
+
+                        <h3>
+                            Limpieza dental
+                        </h3>
+
+                        <p>
+                            Cuidado de la salud oral mediante
+                            una limpieza adecuada.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="boton"
+                        >
+                            Agendar cita
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================
+            PROMOCIONES
+        =========================== -->
+
+        <section
+            class="promocion"
+            id="promociones"
+        >
+
+            <h2>
+                Promoción especial de Amor y Amistad
+            </h2>
+
+            <p>
+                Este Amor y Amistad celebra con una
+                sonrisa nueva y aprovecha nuestra
+                promoción especial en carillas dentales.
+            </p>
+
+            <div class="precio-promocion">
+
+                Carillas dentales
+
+            </div>
+
+            <p>
+                Pregunta por las condiciones de la
+                promoción y agenda tu valoración.
+            </p>
+
+            <a
+                href="#contacto"
+                class="boton"
+            >
+                Quiero aprovecharla
+            </a>
+
+        </section>
+
+
+        <!-- ==========================
+            NOSOTROS
+        =========================== -->
+
+        <section id="nosotros">
+
+            <div class="nosotros">
+
+                <div>
+
+                    <img
+                        src="img/nosotros.jpg"
+                        alt="Consultorio odontológico"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Sobre nosotros
+                    </h2>
+
+                    <p>
+                        Ramona Gómez Odontología Estética
+                        es un consultorio dedicado al cuidado
+                        dental y a la estética de la sonrisa.
+                    </p>
+
+                    <p>
+                        Nuestro objetivo es brindar una atención
+                        profesional y ayudar a nuestros pacientes
+                        a conseguir una sonrisa saludable y estética.
+                    </p>
+
+                    <p>
+
+                        <strong>
+                            Eslogan:
+                        </strong>
+
+                        Somos tu mejor sonrisa.
+
+                    </p>
+
+                    <p>
+
+                        <strong>
+                            Horario:
+                        </strong>
+
+                        Lunes a viernes de 8:00 a.m.
+                        a 12:00 p.m. y de 2:00 p.m.
+                        a 6:00 p.m.
+
+                    </p>
+
+                    <p>
+
+                        <strong>
+                            Sábados:
+                        </strong>
+
+                        8:00 a.m. a 12:00 p.m.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================
+            CONTACTO
+        =========================== -->
+
+        <section id="contacto">
+
+            <div class="titulo-seccion">
+
+                <h2>
+                    Contáctanos
+                </h2>
+
+                <p>
+                    Estamos disponibles para atenderte
+                </p>
+
+            </div>
+
+
+            <div class="contacto">
+
+
+                <div class="informacion-contacto">
+
+                    <h3>
+                        Información de contacto
+                    </h3>
+
+                    <p>
+                        Dirección:
+                        Calle 12 #11-103
+                    </p>
+
+                    <p>
+                        Teléfono:
+                        304 820 3232
+                    </p>
+
+                    <p>
+                        Instagram:
+
+                        <a
+                            href="https://www.instagram.com/ramonagv.sonrisas/"
+                            target="_blank"
+                        >
+                            @ramonagv.sonrisas
+                        </a>
+
+                    </p>
+
+                    <p>
+                        Horario:
+
+                        Lunes a viernes de 8:00 a.m.
+                        a 12:00 p.m. y de 2:00 p.m.
+                        a 6:00 p.m.
+                    </p>
+
+                    <p>
+                        Sábados:
+
+                        8:00 a.m. a 12:00 p.m.
+                    </p>
+
+                </div>
+
+
+                <form>
+
+                    <div class="campo">
+
+                        <label for="nombre">
+                            Nombre:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Escribe tu nombre"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="correo">
+                            Correo electrónico:
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="correo@ejemplo.com"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="telefono">
+                            Teléfono:
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="304 820 3232"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="motivo">
+                            Motivo de consulta:
+                        </label>
+
+                        <select
+                            id="motivo"
+                            name="motivo"
+                        >
+
+                            <option>
+                                Consulta general
+                            </option>
+
+                            <option>
+                                Carillas dentales
+                            </option>
+
+                            <option>
+                                Promoción Amor y Amistad
+                            </option>
+
+                            <option>
+                                Blanqueamiento dental
+                            </option>
+
+                            <option>
+                                Diseño de sonrisa
+                            </option>
+
+                            <option>
+                                Limpieza dental
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="mensaje">
+                            Mensaje:
+                        </label>
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            placeholder="Escribe tu mensaje"
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="boton"
+                    >
+                        Enviar mensaje
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================
+        FOOTER
+    =========================== -->
+
+    <footer>
+
+        <h2>
+            Ramona Gómez
+        </h2>
+
+        <p>
+            Odontología Estética
+        </p>
+
+        <p>
+            Somos tu mejor sonrisa.
+        </p>
+
+        <h3>
+            Información
+        </h3>
+
+        <p>
+            Calle 12 #11-103
+        </p>
+
+        <p>
+            Teléfono: 304 820 3232
+        </p>
+
+        <p>
+            Instagram:
+
+            <a
+                href="https://www.instagram.com/ramonagv.sonrisas/"
+                target="_blank"
+            >
+                @ramonagv.sonrisas
+            </a>
+
+        </p>
+
+        <p>
+            Horario:
+
+            Lunes a viernes de 8:00 a.m.
+            a 12:00 p.m. y de 2:00 p.m.
+            a 6:00 p.m.
+        </p>
+
+        <p>
+            Sábados:
+            8:00 a.m. a 12:00 p.m.
+        </p>
+
+        <p>
+            &copy; 2026 Ramona Gómez Odontología Estética.
+            Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
